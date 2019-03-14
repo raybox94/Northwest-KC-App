@@ -35,8 +35,8 @@ class NewTeamViewController: UIViewController {
         
         if teamNameTF.text != "" && (student0TF.text != "" || student1TF.text != "" || student2TF.text != "")  {
          school.addTeam(name: team.name, students: team.students)
+            self.dismiss(animated: true, completion: nil)
         }
-        self.dismiss(animated: true, completion: nil)
     }//end of doneBTN method
     
     override func didReceiveMemoryWarning() {

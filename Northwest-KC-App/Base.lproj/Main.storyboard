@@ -182,7 +182,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student 1::" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wb-gR-eM7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wb-gR-eM7">
                                 <rect key="frame" x="16" y="243" width="95.5" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="jMh-4T-XDi"/>
@@ -216,7 +216,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abW-9A-it0">
-                                <rect key="frame" x="135.5" y="309" width="242.5" height="30"/>
+                                <rect key="frame" x="135.5" y="307" width="242.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -250,7 +250,7 @@
                             <constraint firstItem="cDQ-Jg-GlV" firstAttribute="trailing" secondItem="Ze1-xe-Klg" secondAttribute="trailing" constant="36" id="qVq-7e-XuS"/>
                             <constraint firstItem="ycx-6L-M3M" firstAttribute="top" secondItem="Ze1-xe-Klg" secondAttribute="bottom" constant="26" id="qvl-n3-EIB"/>
                             <constraint firstItem="Ze1-xe-Klg" firstAttribute="leading" secondItem="abW-9A-it0" secondAttribute="leading" id="sz2-9x-ixH"/>
-                            <constraint firstItem="abW-9A-it0" firstAttribute="top" secondItem="UMh-oz-LTw" secondAttribute="bottom" constant="34" id="zPb-6v-V1R"/>
+                            <constraint firstItem="abW-9A-it0" firstAttribute="top" secondItem="UMh-oz-LTw" secondAttribute="bottom" constant="32" id="zPb-6v-V1R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cDQ-Jg-GlV"/>
                     </view>

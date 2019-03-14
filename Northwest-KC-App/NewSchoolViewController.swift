@@ -10,6 +10,29 @@ import UIKit
 
 class NewSchoolViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var nameTF: UITextField!
+    
+    @IBOutlet weak var coachTF: UITextField!
+    
+    
+    @IBAction func cancelBTN(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }//end of cancelBTN method
+    
+    
+    @IBAction func doneBTN(_ sender: Any) {
+        
+        if nameTF.text != "" , coachTF.text != ""{
+        let school = School(name: nameTF.text!, coach: coachTF.text!, teams: [])
+        Schools.shared.add(school: school)
+        }
+         self.dismiss(animated: true, completion: nil)
+    }//end of doneBTN method
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

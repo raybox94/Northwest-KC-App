@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="e6e-5f-ucu" detailTextLabel="gzC-w0-IHa" style="IBUITableViewCellStyleSubtitle" id="Tza-Fp-dUv">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Schools" textLabel="e6e-5f-ucu" detailTextLabel="gzC-w0-IHa" style="IBUITableViewCellStyleSubtitle" id="Tza-Fp-dUv">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tza-Fp-dUv" id="nQa-wV-K4O">
@@ -42,6 +42,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="m8q-VB-Ped" kind="show" identifier="TeamTableViewController" id="3pG-o2-c0F"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -56,9 +59,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="m8q-VB-Ped" kind="push" id="y5i-4F-hIS"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTI-nT-6kX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,8 +77,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Add New School" id="1Xn-aj-NmM">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="NFF-b1-lKC"/>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="45m-8L-LQm"/>
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="NFF-b1-lKC">
+                                            <connections>
+                                                <action selector="cancelBTN:" destination="F0s-GW-PxR" id="ZGB-uT-0Kg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="45m-8L-LQm">
+                                            <connections>
+                                                <action selector="doneBTN:" destination="F0s-GW-PxR" id="JRs-4i-OOT"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -114,6 +122,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2sr-Pq-dHK"/>
                     </view>
+                    <connections>
+                        <outlet property="coachTF" destination="L67-NN-MT5" id="j37-1Q-IJe"/>
+                        <outlet property="nameTF" destination="XJh-vs-Tk3" id="7O9-ax-BS6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25K-H3-78n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,8 +144,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Add New Team" id="1X0-n5-2hX">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="tnt-iV-l1f"/>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="CxS-mR-8AE"/>
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="tnt-iV-l1f">
+                                            <connections>
+                                                <action selector="cancelBTN:" destination="Twc-hA-YoJ" id="8u6-Gw-rL7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="CxS-mR-8AE">
+                                            <connections>
+                                                <action selector="doneBTN:" destination="Twc-hA-YoJ" id="QMD-ut-VlF"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -197,6 +217,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cDQ-Jg-GlV"/>
                     </view>
+                    <connections>
+                        <outlet property="student0TF" destination="ycx-6L-M3M" id="aGn-pa-26u"/>
+                        <outlet property="student1TF" destination="UMh-oz-LTw" id="kKl-wQ-v5Z"/>
+                        <outlet property="student2TF" destination="abW-9A-it0" id="dGo-H7-BQZ"/>
+                        <outlet property="teamNameTF" destination="Ze1-xe-Klg" id="DVx-mh-GjD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aXC-qN-tOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,13 +237,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KgU-ob-juN">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Teams" textLabel="wyE-im-3tg" style="IBUITableViewCellStyleDefault" id="KgU-ob-juN">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KgU-ob-juN" id="cRP-Ob-pzy">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wyE-im-3tg">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="N63-iF-3iL" kind="show" identifier="StudentViewController" id="hVm-wy-Kvj"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -228,13 +266,10 @@
                     <navigationItem key="navigationItem" title="Teams" id="8c5-Sy-Deq">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="OI4-mb-c2k">
                             <connections>
-                                <segue destination="Twc-hA-YoJ" kind="presentation" id="DA4-ly-fUW"/>
+                                <segue destination="Twc-hA-YoJ" kind="presentation" identifier="NewTeamViewController" id="DA4-ly-fUW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="N63-iF-3iL" kind="push" id="yod-Ql-VXf"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLG-OM-AVy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -276,14 +311,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdG-eh-gR9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdG-eh-gR9">
                                 <rect key="frame" x="216" y="204" width="117" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student 3:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Lu-r4-KNo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Lu-r4-KNo">
                                 <rect key="frame" x="216" y="260" width="117" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -295,6 +330,11 @@
                         <viewLayoutGuide key="safeArea" id="Tr7-XK-W7o"/>
                     </view>
                     <navigationItem key="navigationItem" title="Students" id="ofd-pd-uHB"/>
+                    <connections>
+                        <outlet property="student0LBL" destination="g5T-4l-Ygh" id="cjY-H6-tis"/>
+                        <outlet property="student1LBL" destination="cdG-eh-gR9" id="H6K-PC-1ua"/>
+                        <outlet property="student2LBL" destination="9Lu-r4-KNo" id="YeY-eF-vaI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mot-ab-hDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

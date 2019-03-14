@@ -12,8 +12,8 @@
 		6B281264223AAA4500BF7F99 /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B281263223AAA4500BF7F99 /* StudentsViewController.swift */; };
 		6B281266223AAA8400BF7F99 /* NewSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B281265223AAA8400BF7F99 /* NewSchoolViewController.swift */; };
 		6B281268223AAAD100BF7F99 /* NewTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B281267223AAAD100BF7F99 /* NewTeamViewController.swift */; };
+		6B28126A223AAE7800BF7F99 /* Schools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B281269223AAE7800BF7F99 /* Schools.swift */; };
 		6B754530223A9FD100FB5C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B75452F223A9FD100FB5C27 /* AppDelegate.swift */; };
-		6B754532223A9FD100FB5C27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B754531223A9FD100FB5C27 /* ViewController.swift */; };
 		6B754535223A9FD100FB5C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B754533223A9FD100FB5C27 /* Main.storyboard */; };
 		6B754537223A9FD500FB5C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B754536223A9FD500FB5C27 /* Assets.xcassets */; };
 		6B75453A223A9FD500FB5C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B754538223A9FD500FB5C27 /* LaunchScreen.storyboard */; };
@@ -25,9 +25,9 @@
 		6B281263223AAA4500BF7F99 /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
 		6B281265223AAA8400BF7F99 /* NewSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSchoolViewController.swift; sourceTree = "<group>"; };
 		6B281267223AAAD100BF7F99 /* NewTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTeamViewController.swift; sourceTree = "<group>"; };
+		6B281269223AAE7800BF7F99 /* Schools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schools.swift; sourceTree = "<group>"; };
 		6B75452C223A9FD100FB5C27 /* Northwest-KC-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Northwest-KC-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B75452F223A9FD100FB5C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6B754531223A9FD100FB5C27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6B754534223A9FD100FB5C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B754536223A9FD500FB5C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B754539223A9FD500FB5C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				6B75452F223A9FD100FB5C27 /* AppDelegate.swift */,
-				6B754531223A9FD100FB5C27 /* ViewController.swift */,
+				6B281269223AAE7800BF7F99 /* Schools.swift */,
 				6B28125F223AA9C400BF7F99 /* SchoolsTableViewController.swift */,
 				6B281261223AA9FF00BF7F99 /* TeamsTableViewController.swift */,
 				6B281263223AAA4500BF7F99 /* StudentsViewController.swift */,
@@ -151,8 +151,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B281260223AA9C400BF7F99 /* SchoolsTableViewController.swift in Sources */,
-				6B754532223A9FD100FB5C27 /* ViewController.swift in Sources */,
 				6B281262223AA9FF00BF7F99 /* TeamsTableViewController.swift in Sources */,
+				6B28126A223AAE7800BF7F99 /* Schools.swift in Sources */,
 				6B281266223AAA8400BF7F99 /* NewSchoolViewController.swift in Sources */,
 				6B281268223AAAD100BF7F99 /* NewTeamViewController.swift in Sources */,
 				6B281264223AAA4500BF7F99 /* StudentsViewController.swift in Sources */,

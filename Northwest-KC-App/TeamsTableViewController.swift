@@ -10,9 +10,11 @@ import UIKit
 
 class TeamsTableViewController: UITableViewController {
 
+    
+      var school:School!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -24,24 +26,46 @@ class TeamsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return school.teams.count
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+    
 
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Teams")
+        cell?.textLabel?.text = school.teams[indexPath.row].name
         // Configure the cell...
 
-        return cell
+        return cell!
     }
-    */
-
+ 
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        if(segue.identifier == "NewTeamViewController"){
+            let schoolsDVC = segue.destination as! NewTeamViewController
+            // Pass the selected object to the new view controller.
+            schoolsDVC.school = self.school
+        }
+        
+        if(segue.identifier == "StudentViewController"){
+            // Pass the selected object to the new view controller.
+            let studentsDVC = segue.destination as! StudentsViewController
+            // Pass the selected object to the new view controller.
+            studentsDVC.students = school.teams[tableView.indexPathForSelectedRow!.row]
+        }
+        
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

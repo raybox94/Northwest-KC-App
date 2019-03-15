@@ -46,6 +46,8 @@ class TeamsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
+        self.navigationItem.title = school.name
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

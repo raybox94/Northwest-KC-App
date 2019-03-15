@@ -27,6 +27,7 @@ class StudentsViewController: UIViewController {
         student0LBL.text = students?.students[0]
         student1LBL.text = students?.students[1]
         student2LBL.text = students?.students[2]
+         self.navigationItem.title = students?.name
         
         // Do any additional setup after loading the view.
     }
